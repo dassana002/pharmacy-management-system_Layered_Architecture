@@ -10,6 +10,7 @@ module org.example.pharmacypos_layered {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires java.sql;
 
     opens org.example.pharmacypos_layered to javafx.fxml;
     exports org.example.pharmacypos_layered;
