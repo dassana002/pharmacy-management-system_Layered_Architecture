@@ -13,7 +13,7 @@ public class Launcher extends Application{
     @Override
     public void start(Stage stage) throws IOException {
         // create a scene Object
-        scene = new Scene(loadFXML(""));
+        scene = new Scene(loadFXML("LogInPage"));
         //scene object set to stage
         stage.setScene(scene);
         // scene object pop up
@@ -26,7 +26,7 @@ public class Launcher extends Application{
     }
 
     public static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Launcher.class.getResource("/lk/ijse/pharmacymanagementsystem/" +fxml + ".fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Launcher.class.getResource("/org/example/pharmacypos_layered/" +fxml + ".fxml"));
         return fxmlLoader.load();
     }
 
