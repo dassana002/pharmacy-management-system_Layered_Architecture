@@ -1,15 +1,20 @@
 package org.example.pharmacypos_layered.db;
 
+import lombok.Getter;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+// Using Singleton Design Pattern
 public class DbConnection {
     private final String URL = "jdbc:mysql://localhost:3306/pharmacy";
     private final String USER = "root";
     private final String PASSWORD = "DAka@24381";
 
     private static DbConnection dbConnection;
+
+    @Getter
     private final Connection connection;
 
     private DbConnection() throws SQLException, ClassNotFoundException {
@@ -20,9 +25,5 @@ public class DbConnection {
     public static DbConnection getInstance() throws SQLException, ClassNotFoundException {
         if (dbConnection==null) return new DbConnection();
         return dbConnection;
-    }
-
-    public Connection getConnection() {
-        return connection;
     }
 }
