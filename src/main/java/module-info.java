@@ -11,7 +11,12 @@ module org.example.pharmacypos_layered {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
     requires java.sql;
+    requires static lombok;
+    requires jbcrypt;
 
     opens org.example.pharmacypos_layered to javafx.fxml;
     exports org.example.pharmacypos_layered;
+
+    opens org.example.pharmacypos_layered.controller to javafx.fxml;
+
 }
