@@ -55,7 +55,7 @@ public class LogInPageController implements Initializable {
 
                     // set Current username to static Field
                     References.currentUserName = userName;
-                    Launcher.setRoot("DashLayout");
+//                    Launcher.setRoot("DashLayout");
 
                 }else{
                     System.out.println("Unauthorised access");
