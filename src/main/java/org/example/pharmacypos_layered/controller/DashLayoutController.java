@@ -29,7 +29,7 @@ public class DashLayoutController implements Initializable {
 
     public void backToDashBoard() throws IOException {
         try {
-            Parent dashBoard = Launcher.loadFXML("pages/DashBoardPage");
+            Parent dashBoard = Launcher.loadFXML("components/DashBoardPage");
             mainContent.getChildren().setAll(dashBoard);
         } catch (IOException e) {
             e.printStackTrace();
@@ -60,7 +60,11 @@ public class DashLayoutController implements Initializable {
     }
 
     @FXML
-    void handleLogOut(ActionEvent event) throws IOException {
-        Launcher.setRoot("LogInPage");
+    public void handleLogOut(ActionEvent event) {
+        try {
+            Launcher.setRoot("LogInPage");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
