@@ -1,7 +1,7 @@
 package org.example.pharmacypos_layered.utility;
 
-import org.example.pharmacypos_layered.controller.DashBoardController;
-import org.example.pharmacypos_layered.controller.DashLayoutController;
+import org.example.pharmacypos_layered.controller.page.DashBoardController;
+import org.example.pharmacypos_layered.controller.page.DashLayoutController;
 
 public class References {
     public static String currentUserName;

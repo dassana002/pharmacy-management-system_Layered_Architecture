@@ -24,10 +24,10 @@
         prefHeight="700.0"
         prefWidth="1100.0"
         styleClass="root"
-        stylesheets="@css/LogInPage.css"
+        stylesheets="@../css/LogInPage.css"
         xmlns="http://javafx.com/javafx/25"
         xmlns:fx="http://javafx.com/fxml/1"
-        fx:controller="org.example.pharmacypos_layered.controller.LogInPageController">
+        fx:controller="org.example.pharmacypos_layered.controller.page.LogInPageController">
 
     <!-- Animated Background Circles -->
     <Circle fx:id="bgCircle1" layoutX="150.0" layoutY="100.0" radius="120.0" styleClass="bg-circle-1" />

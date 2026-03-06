@@ -1,4 +1,4 @@
-package org.example.pharmacypos_layered.controller;
+package org.example.pharmacypos_layered.controller.page;
 
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
@@ -13,7 +13,6 @@ import org.example.pharmacypos_layered.dto.EmployeeDTO;
 import org.example.pharmacypos_layered.service.BOFactory;
 import org.example.pharmacypos_layered.service.BOType;
 import org.example.pharmacypos_layered.service.EmployeeBO;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -41,7 +40,7 @@ public class SignUpController implements Initializable {
 
     @FXML
     void BackToLoginPage(ActionEvent event) throws IOException {
-        Launcher.setRoot("LogInPage");
+        Launcher.setRoot("page/LogInPage");
     }
 
     @FXML

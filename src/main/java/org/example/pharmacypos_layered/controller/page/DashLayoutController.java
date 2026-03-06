@@ -1,4 +1,4 @@
-package org.example.pharmacypos_layered.controller;
+package org.example.pharmacypos_layered.controller.page;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -7,7 +7,6 @@ import javafx.scene.Parent;
 import javafx.scene.layout.AnchorPane;
 import org.example.pharmacypos_layered.Launcher;
 import org.example.pharmacypos_layered.utility.References;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -29,7 +28,7 @@ public class DashLayoutController implements Initializable {
 
     public void backToDashBoard() throws IOException {
         try {
-            Parent dashBoard = Launcher.loadFXML("components/DashBoardPage");
+            Parent dashBoard = Launcher.loadFXML("page/DashBoardPage");
             mainContent.getChildren().setAll(dashBoard);
         } catch (IOException e) {
             e.printStackTrace();
@@ -40,7 +39,7 @@ public class DashLayoutController implements Initializable {
     public void loadOrderPage() {
         Parent dashBoard = null;
         try {
-            dashBoard = Launcher.loadFXML("pages/OrderPage");
+            dashBoard = Launcher.loadFXML("page/OrderPage");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -49,20 +48,20 @@ public class DashLayoutController implements Initializable {
 
     // Load Employee Page
     public void loadEmployeePage() throws IOException {
-        Parent medicinePage = Launcher.loadFXML("components/employee/SignUpPage");
+        Parent medicinePage = Launcher.loadFXML("page/SignUpPage");
         mainContent.getChildren().setAll(medicinePage);
     }
 
     // Load Item Page
     public void loadItemPage() throws IOException{
-        Parent medicinePage = Launcher.loadFXML("pages/ProductPage");
+        Parent medicinePage = Launcher.loadFXML("page/ProductPage");
         mainContent.getChildren().setAll(medicinePage);
     }
 
     @FXML
     public void handleLogOut(ActionEvent event) {
         try {
-            Launcher.setRoot("LogInPage");
+            Launcher.setRoot("page/LogInPage");
         } catch (IOException e) {
             e.printStackTrace();
         }

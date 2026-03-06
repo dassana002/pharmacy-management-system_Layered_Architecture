@@ -1,4 +1,4 @@
-package org.example.pharmacypos_layered.controller;
+package org.example.pharmacypos_layered.controller.page;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -57,7 +57,7 @@ public class LogInPageController implements Initializable {
                     References.currentUserName = userName;
 
                     // Load DashLayout UI and
-                    Launcher.setRoot("components/DashLayout");
+                    Launcher.setRoot("page/DashLayout");
 
                 }else{
                     System.out.println("Unauthorised access");

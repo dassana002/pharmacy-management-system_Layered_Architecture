@@ -7,6 +7,9 @@ module org.example.pharmacypos_layered {
     requires jbcrypt;
     requires static lombok;
 
-    opens org.example.pharmacypos_layered.controller to javafx.fxml;
     exports org.example.pharmacypos_layered;
+    opens org.example.pharmacypos_layered;
+
+    exports org.example.pharmacypos_layered.controller.page;
+    opens org.example.pharmacypos_layered.controller.page to javafx.fxml;
 }

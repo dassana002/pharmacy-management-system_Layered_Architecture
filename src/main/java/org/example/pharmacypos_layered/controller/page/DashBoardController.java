@@ -1,13 +1,10 @@
-package org.example.pharmacypos_layered.controller;
+package org.example.pharmacypos_layered.controller.page;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
 import javafx.scene.layout.AnchorPane;
-import org.example.pharmacypos_layered.Launcher;
 import org.example.pharmacypos_layered.utility.References;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;

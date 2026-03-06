@@ -13,7 +13,7 @@ public class Launcher extends Application{
     @Override
     public void start(Stage stage) throws IOException {
         // create a scene Object
-        scene = new Scene(loadFXML("LogInPage"));
+        scene = new Scene(loadFXML("page/LogInPage"));
         //scene object set to stage
         stage.setScene(scene);
         // scene object pop up
