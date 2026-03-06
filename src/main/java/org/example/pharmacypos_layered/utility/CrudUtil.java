@@ -11,7 +11,7 @@ public class CrudUtil {
     public static <T>T execute(String query, Object...object) throws SQLException, ClassNotFoundException {
 
         // get Connection
-        Connection connection = DbConnection.getInstance().getConnection();
+        Connection connection = DbConnection.getConnection();
 
         // Set Connection to PreparedStatement
         PreparedStatement ps = connection.prepareStatement(query);

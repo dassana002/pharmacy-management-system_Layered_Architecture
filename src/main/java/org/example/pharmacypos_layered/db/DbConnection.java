@@ -1,7 +1,5 @@
 package org.example.pharmacypos_layered.db;
 
-import lombok.Getter;
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -14,7 +12,6 @@ public class DbConnection {
 
     private static DbConnection dbConnection;
 
-    @Getter
     private final Connection connection;
 
     private DbConnection() throws SQLException, ClassNotFoundException {
@@ -23,7 +20,13 @@ public class DbConnection {
     }
 
     public static DbConnection getInstance() throws SQLException, ClassNotFoundException {
-        if (dbConnection==null) return new DbConnection();
+        if (dbConnection == null) {
+            dbConnection = new DbConnection();
+        }
         return dbConnection;
+    }
+
+    public static Connection getConnection() throws SQLException, ClassNotFoundException {
+        return getInstance().connection;
     }
 }
