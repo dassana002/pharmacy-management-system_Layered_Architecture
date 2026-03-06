@@ -27,4 +27,16 @@ public class EmployeeDAOImpl implements EmployeeDAO {
         }
         return employee;
     }
+
+    @Override
+    public boolean saveEmployee(Employee employee) throws SQLException, ClassNotFoundException {
+        String query = "INSERT INTO employee (user_name, name, password_hash, role) VALUES (?, ?, ?, ?)";
+        return CrudUtil.execute(
+                query,
+                employee.getUserName(),
+                employee.getName(),
+                employee.getPassword(),
+                employee.getRole()
+        );
+    }
 }

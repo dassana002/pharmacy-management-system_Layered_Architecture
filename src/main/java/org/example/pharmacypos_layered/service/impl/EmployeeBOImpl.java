@@ -3,6 +3,7 @@ package org.example.pharmacypos_layered.service.impl;
 import org.example.pharmacypos_layered.dao.DAOFactory;
 import org.example.pharmacypos_layered.dao.DAOType;
 import org.example.pharmacypos_layered.dao.EmployeeDAO;
+import org.example.pharmacypos_layered.dto.EmployeeDTO;
 import org.example.pharmacypos_layered.entity.Employee;
 import org.example.pharmacypos_layered.service.EmployeeBO;
 import org.mindrot.jbcrypt.BCrypt;
@@ -27,5 +28,18 @@ public class EmployeeBOImpl implements EmployeeBO {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+
+    @Override
+    public boolean saveEmployee(EmployeeDTO employeeDTO) throws Exception {
+        String hashedPassword = BCrypt.hashpw(employeeDTO.getPassword(), BCrypt.gensalt());
+        Employee employee = new Employee(
+                0,
+                employeeDTO.getUserName(),
+                employeeDTO.getName(),
+                hashedPassword,
+                employeeDTO.getRole()
+        );
+        return employeeDAO.saveEmployee(employee);
     }
 }
