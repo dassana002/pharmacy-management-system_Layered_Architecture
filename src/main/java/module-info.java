@@ -6,6 +6,7 @@ module org.example.pharmacypos_layered {
     requires mysql.connector.j;
     requires jbcrypt;
     requires static lombok;
+    requires javafx.graphics;
 
     exports org.example.pharmacypos_layered;
     opens org.example.pharmacypos_layered;
