@@ -9,7 +9,7 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import org.example.pharmacypos_layered.Launcher;
-import org.example.pharmacypos_layered.dto.EmployeeDTO;
+import org.example.pharmacypos_layered.dto.employee.EmployeeDTO;
 import org.example.pharmacypos_layered.service.BOFactory;
 import org.example.pharmacypos_layered.service.BOType;
 import org.example.pharmacypos_layered.service.EmployeeBO;
